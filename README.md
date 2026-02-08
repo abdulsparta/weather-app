@@ -1,16 +1,28 @@
-# React + Vite
+# 🌤️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **React 20 + Vite** web application that displays:  
 
-Currently, two official plugins are available:
+- Current weather (via [Open-Meteo API](https://open-meteo.com/))  
+- Current date and time  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app is fully **Dockerized** and runs on **port 8080** once built.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Fetch live weather based on user location  
+- Show current date and time  
+- Built with **React 20** and **Vite** for speed and performance  
+- Served via **Nginx** in Docker for production-ready deployment  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Quick Start
+
+```bash
+cd weather-app
+docker compose build
+docker compose up -d
+```
+Open in your browser: http://localhost:8080
